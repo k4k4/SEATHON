@@ -1,7 +1,7 @@
 
 Đề cho ta file `game` ARM</br>
 ![image](https://user-images.githubusercontent.com/23306492/40349150-e20996ac-5dcf-11e8-8cd8-4fe8c7421f02.png)</br>
-Ta sử dụng **qemu** và **gdb-multiarch**,[peda-arm](https://github.com/alset0326/peda-arm) để debug, setup theo https://tradahacking.vn/debug-linux-kernel-v%E1%BB%9Bi-qemu-v%C3%A0-gdb-38c2cd29f616</br>
+Ta sử dụng **qemu** và **gdb-multiarch**,[peda-arm](https://github.com/alset0326/peda-arm) để debug và setup theo https://tradahacking.vn/debug-linux-kernel-v%E1%BB%9Bi-qemu-v%C3%A0-gdb-38c2cd29f616 or https://github.com/phieulang1993/ctf-writeups/tree/master/2018/AceBearSecurityContest/pwn/arm_exploit</br>
 Chương trình nhìn rối vl nhưng may cũng tìm dc cái lỗi `format string` chỗ hàm ` printf((const char *)&name);` nhưng chỉ khi ta win thì ta mới có thể vào được</br>
 ![image](https://user-images.githubusercontent.com/23306492/40349372-a6410cbc-5dd0-11e8-8d1f-728aeda3e2c2.png)</br>
 ![image](https://user-images.githubusercontent.com/23306492/40349568-2fe34f70-5dd1-11e8-9f80-937d426081be.png)</br>
