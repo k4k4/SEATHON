@@ -6,8 +6,9 @@ Chương trình có 2 function chính : `fun()` nhập số luckynumber và `ech
 ![image](https://user-images.githubusercontent.com/23306492/40347624-223ecf3a-5dcb-11e8-89f5-c7f42d267a8e.png)</br>
 Trong hàm fun() `luckynumber = 0x0804B098`</br>
 ![image](https://user-images.githubusercontent.com/23306492/40347543-e06027f8-5dca-11e8-9330-e32dedb0bfdb.png)</br>
-Trong hàm `echo()` </br> có lỗi stack overflow `n = recv(fd, &buf, 0x11Cu, 0);`</br>
-![image](https://user-images.githubusercontent.com/23306492/40347603-0f1c8438-5dcb-11e8-829c-7cc099e316e9.png)</br>
+Trong hàm `echo()` </br> có lỗi stack overflow `n = recv(fd, &buf, 0x11Cu, 0);`, Vì buf nằm ở ebp-0x10c mà ta đọc tới 0x11c bytes lên buf</br>
+![33085437_1701128753336171_1744560662744399872_n](https://user-images.githubusercontent.com/23306492/40372478-fb230364-5e0e-11e8-858f-5b8952d5237b.png)
+</br>
 Trước tiên thì ta cần `leak canary` sử dụng brute force. Tương tự như write up **codegate-prequels 2017 babypwn** [link](https://github.com/VulnHub/ctf-writeups/blob/master/2017/codegate-prequels/babypwn.md)
 ```
 def leak_canary():
