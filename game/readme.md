@@ -8,7 +8,7 @@ Chương trình nhìn rối vl nhưng may cũng tìm dc cái lỗi `format strin
 Rồi tiếp theo ta cần thắng đc boss thì ta có thể exploit dc</br>
 Hàm main()</br>
 ![image](https://user-images.githubusercontent.com/23306492/40349731-ad7616de-5dd1-11e8-8f85-01d1263388de.png)</br>
-Với `srand(time(0))` ta có thể sử dụng để qua dc hàm rand()</br>
+Với `srand(time(0))` vì time(0) ở server và time(0) ở máy client nếu chạy cùng trong 1 giây thì sẽ cho ra giá trị như nhau lúc đó ta có thể tính được các giá trị rand(). [link](https://github.com/phieulang1993/ctf-writeups/blob/master/2018/N1CTF/pwn/beeper/beeper.py)</br>
 ```
 proc = CDLL("libc.so.6")
 proc.srand(proc.time(0))
