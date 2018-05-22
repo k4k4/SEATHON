@@ -39,7 +39,7 @@ def leak_canary():
 	return canary
 ```
 ![image](https://user-images.githubusercontent.com/23306492/40347714-6a405a24-5dcb-11e8-81db-a46cf987896a.png)</br>
-Với bài này thì ta sử dụng system 4 byte để exploit. Tương tự như bài [babyfirst-revenge-v2 hitcon 2017](https://github.com/orangetw/My-CTF-Web-Challenges/blob/master/hitcon-ctf-2017/babyfirst-revenge-v2/exploit.py) và  [Reverse Shell](http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)</br>
+Với bài này thì ta sử dụng system 4 byte để exploit. Tương tự như bài [babyfirst-revenge-v2 hitcon 2017](https://github.com/orangetw/My-CTF-Web-Challenges/blob/master/hitcon-ctf-2017/babyfirst-revenge-v2/exploit.py) và  [Reverse Shell python](http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)</br>
 ```
 import socket,subprocess,os
 s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
