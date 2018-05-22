@@ -8,7 +8,7 @@ Trong hàm fun() `luckynumber = 0x0804B098`</br>
 ![image](https://user-images.githubusercontent.com/23306492/40347543-e06027f8-5dca-11e8-9330-e32dedb0bfdb.png)</br>
 Trong hàm `echo()` </br> có lỗi stack overflow `n = recv(fd, &buf, 0x11Cu, 0);`</br>
 ![image](https://user-images.githubusercontent.com/23306492/40347603-0f1c8438-5dcb-11e8-829c-7cc099e316e9.png)</br>
-Trước tiên thì ta cần `leak canary` sử dụng brute force
+Trước tiên thì ta cần `leak canary` sử dụng brute force. Tương tự như write up **codegate-prequels 2017 babypwn** [link](https://github.com/VulnHub/ctf-writeups/blob/master/2017/codegate-prequels/babypwn.md)
 ```
 def leak_canary():
 	canary = ""
