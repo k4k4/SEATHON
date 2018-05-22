@@ -132,5 +132,5 @@ Mấy cái hàm này dài vl nhưng để thắng dc thì cũng dễ vl attack w
 để sử dụng `skill` khi `dword_106F0 >= *(_QWORD *)&MANA`
 để exploit thì ta chỉ cần format string cho `exit_got thành  main(0x10855)` leak địa chỉ stack </br>
 sau đó ta format string  `exit_got thành shell_address`</br>
-[payload](https://raw.githubusercontent.com/k4k4/SECATHON/master/game/game.py)</br>
+[payload](https://github.com/k4k4/SEATHON/blob/master/game/game.py)</br>
 ![game](https://user-images.githubusercontent.com/23306492/40351124-dd0807d2-5dd5-11e8-97e7-a2ee5e201550.png)
