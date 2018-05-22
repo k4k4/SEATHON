@@ -10,7 +10,7 @@ HP = 0
 BOSS = 0
 
 #r = process(["qemu-arm-static","-g","12345", "./game"])
-r = process(["./game"])
+r = process(["qemu-arm-static","./game"])
 proc = CDLL("libc.so.6")
 proc.srand(proc.time(0))
 log.info('seed: %#x' % proc.time(0))
