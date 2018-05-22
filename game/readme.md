@@ -5,7 +5,7 @@ Ta sử dụng **qemu** và **gdb-multiarch**,[peda-arm](https://github.com/alse
 Chương trình nhìn rối vl nhưng may cũng tìm dc cái lỗi `format string` chỗ hàm ` printf((const char *)&name);` nhưng chỉ khi ta win thì ta mới có thể vào exploit được</br>
 ![image](https://user-images.githubusercontent.com/23306492/40349372-a6410cbc-5dd0-11e8-8d1f-728aeda3e2c2.png)</br>
 ![image](https://user-images.githubusercontent.com/23306492/40349568-2fe34f70-5dd1-11e8-9f80-937d426081be.png)</br>
-Rồi tiếp theo ta cần thắng đc boss thì ta có thể exploit dc</br>
+Rồi tiếp theo ta cần thắng đc boss để `bosshp  < 0` thì ta có thể exploit dc</br>
 Hàm main()</br>
 ![image](https://user-images.githubusercontent.com/23306492/40349731-ad7616de-5dd1-11e8-8f85-01d1263388de.png)</br>
 Với `srand(time(0))` nếu cùng seed thì nó sẽ ra 1 chuỗi các số giống nhau vì time(0) ở server và time(0) ở máy client nếu chạy cùng trong 1 giây thì sẽ cho ra giá trị như nhau lúc đó ta có thể tính được các giá trị rand(). [link](https://github.com/phieulang1993/ctf-writeups/blob/master/2018/N1CTF/pwn/beeper/beeper.py)</br>
