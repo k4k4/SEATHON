@@ -133,4 +133,8 @@ Mấy cái hàm này dài vl nhưng để thắng dc thì cũng dễ vl attack w
 để exploit thì ta chỉ cần format string cho `exit_got thành  main(0x10855)` leak địa chỉ stack </br>
 sau đó ta format string  `exit_got thành shell_address`</br>
 [payload](https://github.com/k4k4/SEATHON/blob/master/game/game.py)</br>
-![game](https://user-images.githubusercontent.com/23306492/40351124-dd0807d2-5dd5-11e8-97e7-a2ee5e201550.png)
+![game](https://user-images.githubusercontent.com/23306492/40351124-dd0807d2-5dd5-11e8-97e7-a2ee5e201550.png)</br>
+Xong, tới phần tìm kiếm người chơi cùng.</br>
+Hiện tại trên pwnable.tw thì mình cũng giải quyết dc một số bài kha khá muốn kiếm người chơi cùng</br>
+![image](https://user-images.githubusercontent.com/23306492/40376242-14e47338-5e18-11e8-9fd1-f83e4d6aa538.png)
+
